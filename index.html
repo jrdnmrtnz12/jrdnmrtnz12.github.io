@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Jordan Martinez | Portfolio</title>
-<meta name="description" content="Portfolio of class and personal projects.">
+<meta name="description" content="Jordan Martinez: MS Computer Science student at UNM and network automation intern at Sandia National Laboratories.">
 <style>
   :root { --bg:#fff; --fg:#1a1a1a; --muted:#666; --card:#f6f7f9; --accent:#2563eb; --border:#e3e5e8; }
   @media (prefers-color-scheme: dark) {
@@ -12,64 +12,130 @@
   }
   * { box-sizing:border-box; }
   body { margin:0; font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; background:var(--bg); color:var(--fg); }
-  main { max-width:860px; margin:0 auto; padding:48px 20px 80px; }
+  main { max-width:900px; margin:0 auto; padding:48px 20px 80px; }
   a { color:var(--accent); }
   h1 { font-size:2.2rem; margin:0 0 4px; }
   h2 { margin:48px 0 16px; padding-bottom:8px; border-bottom:1px solid var(--border); }
   .tag { color:var(--muted); margin:0 0 16px; }
   .links a { margin-right:16px; font-weight:600; }
-  .grid { display:grid; gap:16px; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); }
+  .grid { display:grid; gap:16px; grid-template-columns:repeat(auto-fill,minmax(400px,1fr)); }
+  @media (max-width:520px) { .grid { grid-template-columns:1fr; } }
   .card { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:18px; }
-  .card h3 { margin:0 0 6px; }
-  .card p { margin:0 0 12px; color:var(--muted); font-size:.95rem; }
+  .card h3 { margin:0 0 2px; font-size:1.1rem; }
+  .card .meta { color:var(--muted); font-size:.85rem; margin:0 0 10px; }
+  .card ul, .job ul { margin:0 0 12px; padding-left:18px; font-size:.95rem; }
+  .card li, .job li { margin-bottom:4px; }
   .chips span { display:inline-block; font-size:.78rem; padding:2px 8px; margin:0 6px 6px 0; border:1px solid var(--border); border-radius:99px; }
+  .job { margin-bottom:24px; }
+  .job h3 { margin:0; font-size:1.05rem; }
+  .job .meta { color:var(--muted); font-size:.9rem; margin:0 0 8px; }
+  dl.skills { margin:0; }
+  dl.skills dt { font-weight:600; margin-top:12px; }
+  dl.skills dd { margin:0; color:var(--muted); }
 </style>
 </head>
 <body>
 <main>
   <header>
     <h1>Jordan Martinez</h1>
-    <p class="tag">[Your major] student at [University] · Interested in [cybersecurity / AI / software]</p>
-    <p>Two or three sentences: what you're studying, what you're building, and the kind of role you want.</p>
+    <p class="tag">MS Computer Science, University of New Mexico · Albuquerque, NM</p>
+    <p>I'm a computer science graduate student and a year-round technical intern at Sandia National Laboratories, where I automate enterprise network operations. My coursework projects cover AI/ML, secure software, and high-performance computing.</p>
     <p class="links">
       <a href="https://github.com/jrdnmrtnz12">GitHub</a>
-      <a href="https://www.linkedin.com/in/YOUR-HANDLE">LinkedIn</a>
-      <a href="mailto:you@example.com">Email</a>
-      <a href="resume.pdf">Resume (PDF)</a>
+      <a href="https://www.linkedin.com/in/jordan-martinez-887b45191/">LinkedIn</a>
+      <a href="mailto:jrdnmrtnz12@gmail.com">Email</a>
+      <a href="Jordan%20M%20Resume.pdf">Resume (PDF)</a>
     </p>
   </header>
 
   <h2>Projects</h2>
   <div class="grid">
-    <!-- Copy this card for each project -->
+    <!-- To link a project to its own repo, change the href on its "Code" link. -->
     <article class="card">
-      <h3>Project Title</h3>
-      <p>One line on the problem, what you built, and a result (e.g. "cut runtime 40%", "detected X of Y attacks").</p>
-      <div class="chips"><span>Python</span><span>Course name</span></div>
-      <a href="https://github.com/jrdnmrtnz12/REPO">Code →</a>
+      <h3>Evolving NFL Play-Calling with a Genetic Algorithm</h3>
+      <p class="meta">Complex Adaptive Systems · Spring 2026</p>
+      <ul>
+        <li>Built a Python drive simulator from 106,000+ plays of 2022–2024 NFL data, modeling down and distance, field position, and situational play-calling.</li>
+        <li>Evolved offensive strategies over 100 generations using tournament selection, uniform crossover, Gaussian mutation, and elitism.</li>
+        <li>Found and fixed a fitness-function exploit. Adding a turnover penalty flipped the best strategy from deep-pass to short-pass dominant.</li>
+        <li>Validated across 10 random seeds (50 GA runs), which showed a rugged fitness landscape with bimodal convergence.</li>
+      </ul>
+      <div class="chips"><span>Python</span><span>Genetic Algorithms</span><span>nfl_data_py</span></div>
+      <a href="https://github.com/jrdnmrtnz12">Code →</a>
     </article>
+
     <article class="card">
-      <h3>Project Title</h3>
-      <p>Problem, approach, result.</p>
-      <div class="chips"><span>Java</span><span>Course name</span></div>
-      <a href="https://github.com/jrdnmrtnz12/REPO">Code →</a>
+      <h3>Security Analysis of AI-Generated Authentication Code</h3>
+      <p class="meta">Cyber Security · Spring 2026</p>
+      <ul>
+        <li>Evaluated 30 Flask authentication samples from ChatGPT, Gemini, and Claude Code under naive and security-aware prompts.</li>
+        <li>Combined Bandit static analysis with manual review mapped to OWASP Top 10 and CWE. Manual review found 114 issues versus Bandit's 21, including six of seven Critical findings Bandit missed.</li>
+        <li>Identified cross-file inconsistencies, such as hashed passwords in one file and plaintext comparison in another, that static tools can't detect.</li>
+      </ul>
+      <div class="chips"><span>Python</span><span>Flask</span><span>Bandit</span><span>OWASP</span><span>CWE</span></div>
+      <a href="https://github.com/jrdnmrtnz12">Code →</a>
     </article>
+
     <article class="card">
-      <h3>Project Title</h3>
-      <p>Problem, approach, result.</p>
-      <div class="chips"><span>C</span><span>Course name</span></div>
-      <a href="https://github.com/jrdnmrtnz12/REPO">Code →</a>
+      <h3>Parallel Matrix Multiplication Optimization</h3>
+      <p class="meta">Parallel Processing · Fall 2025</p>
+      <ul>
+        <li>Implemented and benchmarked baseline, loop-unrolled, and cache-blocked matrix multiplication in C/C++.</li>
+        <li>Cut 1000×1000 multiplication from about 0.55 s to 0.20 s, a 2.75× speedup.</li>
+        <li>Analyzed memory-access patterns and cache locality, and benchmarked on an HPC environment.</li>
+      </ul>
+      <div class="chips"><span>C/C++</span><span>HPC</span><span>Performance Tuning</span></div>
+      <a href="https://github.com/jrdnmrtnz12">Code →</a>
     </article>
+
+    <article class="card">
+      <h3>Multi-Elevator Control and Simulation System</h3>
+      <p class="meta">Software Engineering · Spring 2025</p>
+      <ul>
+        <li>Built parts of a multi-elevator control system in Java: cabins, buttons, door assemblies, operating modes, and notifications.</li>
+        <li>Implemented controller logic and Command Center UI features for monitoring elevator state.</li>
+        <li>Integrated subsystems from multiple teams, debugged system-level issues, ran code reviews, and contributed to RDD and SAD architecture documents.</li>
+      </ul>
+      <div class="chips"><span>Java</span><span>OOP</span><span>Team Project</span><span>Architecture Docs</span></div>
+      <a href="https://github.com/jrdnmrtnz12">Code →</a>
+    </article>
+  </div>
+
+  <h2>Experience</h2>
+  <div class="job">
+    <h3>Technical Intern, Enterprise Networking · Sandia National Laboratories</h3>
+    <p class="meta">Albuquerque, NM · October 2023 – Present</p>
+    <ul>
+      <li>Automated source-of-truth processes across three enterprise networks, and automated out-of-band connectivity workflows to reduce manual work and configuration drift.</li>
+      <li>Implemented storm control on enterprise switches to prevent traffic overload and improve network resilience.</li>
+      <li>Built a ServiceNow port-activation workflow connected to a RabbitMQ broker, so a Python script consumes ticket results and makes network changes automatically.</li>
+    </ul>
+  </div>
+  <div class="job">
+    <h3>IT Technician, UNM Learn Management Systems · University of New Mexico</h3>
+    <p class="meta">Albuquerque, NM · September 2021 – May 2023</p>
+    <ul>
+      <li>Reproduced complex issues in staging environments to find root causes in the UNM Learn LMS.</li>
+      <li>Resolved software, permission, and integration problems for students and faculty, and documented workarounds and escalation paths.</li>
+    </ul>
   </div>
 
   <h2>Skills</h2>
-  <div class="chips">
-    <span>Python</span><span>Java</span><span>C</span><span>SQL</span><span>Git</span><span>Linux</span>
-  </div>
+  <dl class="skills">
+    <dt>Programming &amp; Scripting</dt>
+    <dd>Python, C/C++, Java, SQL, Bash/Shell</dd>
+    <dt>Software &amp; AI/ML</dt>
+    <dd>Data Structures &amp; Algorithms, OOP, Genetic Algorithms, Constraint Satisfaction, Minimax/Alpha-Beta Search, API Design</dd>
+    <dt>Automation &amp; DevOps</dt>
+    <dd>Infrastructure Automation, Source-of-Truth Sync, Git/GitHub, ServiceNow, Linux/Unix, RabbitMQ, CI/CD Fundamentals</dd>
+    <dt>Networking</dt>
+    <dd>Enterprise Networking, Out-of-Band Management, Storm Control, Routing &amp; Switching, TCP/IP</dd>
+  </dl>
 
   <h2>Education</h2>
-  <p><strong>[University]</strong>, B.S. [Major], expected [Month Year]<br>
-  <span class="tag">Relevant coursework: …</span></p>
+  <p><strong>University of New Mexico</strong>, M.S. Computer Science, expected December 2026 · GPA 3.95<br>
+  <strong>University of New Mexico</strong>, B.S. Computer Science, completed December 2025 · Cum Laude<br>
+  <span class="tag">Double minor in Mathematics and Psychology</span></p>
 </main>
 </body>
 </html>
