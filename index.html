@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jordan Martinez | Portfolio</title>
+<meta name="description" content="Portfolio of class and personal projects.">
+<style>
+  :root { --bg:#fff; --fg:#1a1a1a; --muted:#666; --card:#f6f7f9; --accent:#2563eb; --border:#e3e5e8; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#0f1115; --fg:#eceef1; --muted:#9aa0a8; --card:#181b21; --accent:#6ea0ff; --border:#2a2e36; }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; background:var(--bg); color:var(--fg); }
+  main { max-width:860px; margin:0 auto; padding:48px 20px 80px; }
+  a { color:var(--accent); }
+  h1 { font-size:2.2rem; margin:0 0 4px; }
+  h2 { margin:48px 0 16px; padding-bottom:8px; border-bottom:1px solid var(--border); }
+  .tag { color:var(--muted); margin:0 0 16px; }
+  .links a { margin-right:16px; font-weight:600; }
+  .grid { display:grid; gap:16px; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:18px; }
+  .card h3 { margin:0 0 6px; }
+  .card p { margin:0 0 12px; color:var(--muted); font-size:.95rem; }
+  .chips span { display:inline-block; font-size:.78rem; padding:2px 8px; margin:0 6px 6px 0; border:1px solid var(--border); border-radius:99px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Jordan Martinez</h1>
+    <p class="tag">[Your major] student at [University] · Interested in [cybersecurity / AI / software]</p>
+    <p>Two or three sentences: what you're studying, what you're building, and the kind of role you want.</p>
+    <p class="links">
+      <a href="https://github.com/jrdnmrtnz12">GitHub</a>
+      <a href="https://www.linkedin.com/in/YOUR-HANDLE">LinkedIn</a>
+      <a href="mailto:you@example.com">Email</a>
+      <a href="resume.pdf">Resume (PDF)</a>
+    </p>
+  </header>
+
+  <h2>Projects</h2>
+  <div class="grid">
+    <!-- Copy this card for each project -->
+    <article class="card">
+      <h3>Project Title</h3>
+      <p>One line on the problem, what you built, and a result (e.g. "cut runtime 40%", "detected X of Y attacks").</p>
+      <div class="chips"><span>Python</span><span>Course name</span></div>
+      <a href="https://github.com/jrdnmrtnz12/REPO">Code →</a>
+    </article>
+    <article class="card">
+      <h3>Project Title</h3>
+      <p>Problem, approach, result.</p>
+      <div class="chips"><span>Java</span><span>Course name</span></div>
+      <a href="https://github.com/jrdnmrtnz12/REPO">Code →</a>
+    </article>
+    <article class="card">
+      <h3>Project Title</h3>
+      <p>Problem, approach, result.</p>
+      <div class="chips"><span>C</span><span>Course name</span></div>
+      <a href="https://github.com/jrdnmrtnz12/REPO">Code →</a>
+    </article>
+  </div>
+
+  <h2>Skills</h2>
+  <div class="chips">
+    <span>Python</span><span>Java</span><span>C</span><span>SQL</span><span>Git</span><span>Linux</span>
+  </div>
+
+  <h2>Education</h2>
+  <p><strong>[University]</strong>, B.S. [Major], expected [Month Year]<br>
+  <span class="tag">Relevant coursework: …</span></p>
+</main>
+</body>
+</html>
